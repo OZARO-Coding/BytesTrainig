@@ -1,0 +1,29 @@
+void sortColors(int* nums, int numsSize){
+    void swap(int *a,int *b);
+    int left=0;
+    int mid=0;
+    int right=numsSize-1;
+    while(mid<=right){
+    
+    if(nums[mid]==0){
+        //nums[left]=nums[mid];
+        swap(&nums[left],&nums[mid]);
+        mid++;
+        left++;
+    }
+    else if(nums[mid]==1){
+        mid++;
+    }
+    else if(nums[mid]==2){
+        //nums[right]=nums[mid];
+        swap(&nums[right],&nums[mid]);
+        right--;
+    }
+    }
+}    
+    void swap(int *a,int *b){
+        int t;
+        t=*a;
+        *a=*b;
+        *b=t;
+    }
